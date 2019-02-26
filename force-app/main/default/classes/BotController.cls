@@ -28,7 +28,7 @@ public with sharing class BotController {
     public static BotResponse submit(String utterance, Map<String, String> session, String fileName, String fileContent) {
         
         try {
-            
+            System.debug('===>' + utterance);
             if (session != null) {
                 String nextCommand = session.get('nextCommand');
                 if (nextCommand != null) {
